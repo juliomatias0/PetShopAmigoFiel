@@ -1,0 +1,46 @@
+/* Estilo geral da página */
+body {
+    background-color: #f4f7f6;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #4CAF50; /* Verde suave */
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Estilo do Menu */
+.navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra simples */
+}
+
+/* Estilo das caixas de formulários e agendamento */
+.caixa-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra simples */
+    margin-bottom: 20px;
+}
+
+/* Estilo dos botões customizados (complementando o Bootstrap) */
+button {
+    border-radius: 8px;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
