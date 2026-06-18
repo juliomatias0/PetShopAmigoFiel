@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop Amigo Fiel</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>PetShop Amigo Fiel</h1>
+        <p>O melhor cuidado para o seu melhor amigo!</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Início</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cadastro">Cadastro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#agendamento">Agendamento</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        
+        <div id="relogio-container" class="alert alert-info text-center">
+            <strong>Data e Hora:</strong> <span id="relogio"></span>
+        </div>
+
+        <div id="carrosselPetshop" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carrosselPetshop" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carrosselPetshop" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carrosselPetshop" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/banner1.png" class="d-block w-100" alt="Cachorro feliz na promoção de banho">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Promoção de Banho</h5>
+                        <p>Deixe seu pet cheiroso com nossos descontos especiais.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner2.png" class="d-block w-100" alt="Gato recebendo tosa higiênica">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Promoção de Tosa</h5>
+                        <p>Tosa na tesoura e na máquina pelo menor preço.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banner3.png" class="d-block w-100" alt="Diversos pets nos pacotes especiais mensais">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Pacotes Especiais</h5>
+                        <p>Feche pacotes mensais e ganhe brindes.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carrosselPetshop" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carrosselPetshop" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <h2 id="servicos" class="mb-4">Nossos Serviços e Produtos</h2>
+        <div class="row mb-5">
+            <div class="col-md-4">
+                <img src="img/banho.png" class="img-fluid rounded" alt="Cachorro tomando banho na banheira">
+                <h4 class="mt-2">Banho Especial</h4>
+            </div>
+            <div class="col-md-4">
+                <img src="img/tosa.png" class="img-fluid rounded" alt="Profissional realizando a tosa em um cachorro">
+                <h4 class="mt-2">Tosa Completa</h4>
+            </div>
+            <div class="col-md-4">
+                <img src="img/pet1.png" class="img-fluid rounded" alt="Cachorro posando limpo e tosado">
+                <h4 class="mt-2">Hospedagem</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" id="cadastro">
+                <div class="caixa-form">
+                    <h3>Cadastro de Cliente e Pet</h3>
+                    <form onsubmit="enviarCadastro(event)">
+                        
+                        <h5 class="mt-3">Dados do Cliente</h5>
+                        <div class="mb-2">
+                            <label>Nome Completo:</label>
+                            <input type="text" class="form-control" name="nome" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>CPF:</label>
+                            <input type="text" class="form-control" name="cpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Sexo:</label><br>
+                            <input type="radio" name="sexo" value="Masculino" required> Masculino
+                            <input type="radio" name="sexo" value="Feminino"> Feminino
+                            <input type="radio" name="sexo" value="Outro"> Outro
+                        </div>
+                        <div class="mb-2">
+                            <label>Telefone:</label>
+                            <input type="tel" class="form-control" name="telefone" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>E-mail:</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Endereço Completo:</label>
+                            <textarea class="form-control" name="endereco" rows="2" required></textarea>
+                        </div>
+
+                        <h5 class="mt-4">Dados do Pet</h5>
+                        <div class="mb-2">
+                            <label>Nome do Pet:</label>
+                            <input type="text" class="form-control" name="nomePet" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Raça:</label>
+                            <input type="text" class="form-control" name="raca" required>
+                        </div>
+                        <div class="mb-2">
+                            <label>Idade (anos):</label>
+                            <input type="number" class="form-control" name="idade" min="0" max="30">
+                        </div>
+                        <div class="mb-3">
+                            <label>Serviço Desejado:</label><br>
+                            <input type="checkbox" name="servico" value="Banho"> Banho
+                            <input type="checkbox" name="servico" value="Tosa"> Tosa
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Enviar Cadastro</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="agendamento">
+                <div class="caixa-form">
+                    <h3>Agendamento de Serviço</h3>
+                    <form onsubmit="fazerAgendamento(event)">
+                        <div class="mb-3">
+                            <label>Método de Atendimento:</label><br>
+                            <input type="radio" name="metodo" value="Tele-busca" required> Tele-busca
+                            <input type="radio" name="metodo" value="Entrega no local"> Entrega no local
+                        </div>
+                        <div class="mb-3">
+                            <label>Data:</label>
+                            <input type="date" class="form-control" name="data" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Horário:</label>
+                            <input type="time" class="form-control" name="horario" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-success w-100 mt-3">Agendar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 PetShop Amigo Fiel. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+SISTEMA WEB: PetShop Amigo Fiel
+VERSÃO: Fase 2
+
+DESCRIÇÃO DO SISTEMA:
+Site desenvolvido para um PetShop com apresentação de serviços, promoções em carrossel e área de captação de clientes e agendamentos.
+
+COMO REALIZAR O CADASTRO:
+1. Acesse a seção "Cadastro de Cliente e Pet".
+2. Preencha todos os campos obrigatórios (Nome, CPF, Sexo, Telefone, E-mail e Endereço).
+3. Preencha os dados do pet informando nome, raça, idade e os serviços desejados (Banho e/ou Tosa).
+4. Clique no botão azul "Enviar Cadastro". Aparecerá um alerta confirmando o sucesso da operação.
+
+COMO REALIZAR O AGENDAMENTO:
+1. Logo ao lado (ou abaixo, em celulares) do cadastro, acesse a caixa "Agendamento de Serviço".
+2. Escolha o método de atendimento (Tele-busca ou Entrega no local).
+3. Selecione a data e o horário desejados no calendário.
+4. Clique no botão verde "Agendar" para finalizar.
+
+TECNOLOGIAS UTILIZADAS:
+- HTML: Estruturação das páginas e formulários.
+- CSS: Estilização visual (cores, bordas arredondadas e sombras).
+- Bootstrap: Framework utilizado via CDN para layout responsivo e Carrossel de imagens.
+- JavaScript: Interatividade (relógio, alertas e mensagens de boas-vindas).
